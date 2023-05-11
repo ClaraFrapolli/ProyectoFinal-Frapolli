@@ -1,0 +1,344 @@
+//variables responsive
+$color-resp1: #FFDDD2;
+$color-resp2: #EAA9D1;
+$color-resp3: green;
+$color-resp4: grey;
+$color-resp5: red;
+
+
+
+/*  VISTA DESKTOP */
+
+@media ( min-width: 1023px)
+{
+   
+    ul{
+        display: flex;
+        list-style: none;
+        
+    }
+    .primero{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        
+        }
+        a{text-decoration: none;
+            color:black}
+    
+            h3, .info{text-align: center;} 
+            .logo{
+                width: 280px;
+                height: 280px;
+                justify-content: space-between;
+            }    
+            li{
+                list-style-type: none;
+                padding: 60px;
+            }
+            header, footer{
+                
+               
+                display: flex;
+                 justify-content: space-between;
+                align-items: center;
+            }
+             
+          
+          
+        .grid{
+       
+            display:grid;
+            grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+        } 
+
+        .estetica{
+  
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "servicio1 servicio2 servicio3";
+        }
+        .servicio1{grid-area: servicio1;}
+        .servicio2{grid-area: servicio2;}
+        .servicio3{grid-area: servicio3;}
+
+        .picture{
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+            
+          }
+
+          .servicio1, .servicio2, .servicio3{
+            background-color: #FFD1D1;
+            border-radius:20px ;
+            padding: 15px;
+            margin: 0px;
+            animation-name: test;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+                }
+                @keyframes test
+                {
+                    from{
+                        background-color: $color-resp1;
+                
+                    }
+                    to{
+                        background-color: $color-resp2;
+                    }
+                 
+                }
+
+            }
+
+            footer{
+                background-color: $color-resp4;
+             } 
+             .whatsapp{
+                background-color: $color-resp3;
+                color: white;
+                border: solid grey 0.3px;
+                padding: 10px;
+                text-align: center;
+                margin-left: 5px;
+                border-radius: 10%;
+                display: inline-block;
+             }
+             .instagram{
+                background-color: $color-resp5;
+                border: solid grey 0.3px;
+                padding: 5px;
+                margin-right: 870px;
+                border-radius: 20%;
+             }
+             .contacto{
+                text-align: center;
+                display: grid;
+                gap: 50px;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "consulta consulta"
+                "formulario mapa"
+                ;
+            }
+            .consulta{grid-area: consulta;}
+            .formulario{grid-area: formulario;
+            }
+            .mapa{grid-area: mapa;}
+            .mapa{ 
+                height: 50%;
+                width: 50%;
+                padding: 0 50px 50px 0;}
+            
+                .consulta{
+                    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 13px;}  
+                    @mixin ColorTest ($color : pink)
+{
+    @if($color == pink)
+    {
+        background-color: $color-resp2;
+    }
+    @if($color == $color-resp1)
+    {
+        background-color: $color-resp1;
+    }
+}
+
+                 
+                
+
+                    .formulario{
+                    
+                        display: inline-block;
+                        height: 430px;
+                        width: 350px;
+                        background-color: $color-resp2;
+                        margin-left: 20px;
+                        @include ColorTest(pink)
+                        
+                      
+                        
+                        }
+
+                        a:hover
+                        {
+                            font-size: 20px;
+                         
+                           
+                            
+                        }
+
+
+
+
+@media(max-width:480px){
+    .primero{
+        margin-top: 3px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-areas: 
+        "presentacion"
+        "parrafo"
+        "texto";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        
+        }
+        a{text-decoration: none;
+            color:black}
+            .picture{
+                border-radius: 50%;
+                height: 50%;
+                width: 50%;
+                margin: 0 auto;
+                display: block;
+              }
+
+
+              .servicio1, .servicio2, .servicio3{
+                background-color: #FFD1D1;
+                border-radius:20px ;
+                padding: 15px;
+                margin: 0px;
+               }
+
+                h3, .info{text-align: center;} 
+                li{
+                    list-style-type: none;
+                    padding: 10px;
+                 
+                }
+                
+                .logo{
+                    width: 130px;
+                    height: 130px;
+                    justify-content: space-between;
+                }
+                header{
+
+              
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+             
+          
+          
+        .grid{
+            
+            display:grid;
+            grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+        }            
+    
+        .estetica{
+    
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "servicio1" 
+            "servicio2" 
+            "servicio3";
+        }
+        .servicio1{grid-area: servicio1;}
+        .servicio2{grid-area: servicio2;}
+        .servicio3{grid-area: servicio3;}
+        body {
+            background-image:  url('../img/fondo2.jpg')
+        } 
+        footer{
+            background-color: $color-resp4;
+            height: auto;
+            width: auto;
+            overflow: hidden;
+            
+            
+            
+          
+         } 
+         .copyright{
+        text-align: center;}
+         .whatsapp{
+           display: inline-block;
+            background-color: $color-resp3;
+            color: white;
+            border: solid grey 0.3px;
+            padding: 5px;
+            text-align: center;
+            border-radius: 10%;
+            margin: 0%;
+            vertical-align: middle;
+            
+         }
+         .instagram{
+            background-color: $color-resp5;
+            border: solid grey 0.3px;
+            padding: 5px;
+            float: left;
+            border-radius: 20%;
+            
+         }    
+         .bienvenida{height: auto;
+            width: 100%; }
+            .maps{ 
+                width: 100%
+                }
+                .contacto{
+                    text-align: center;
+                    display: grid;
+                    gap: 50px;
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto auto auto;
+                    grid-template-areas: 
+                    "consulta" 
+                    "formulario"
+                    "mapa"
+                    ;
+                }
+                .consulta{grid-area: consulta;}
+                .formulario{grid-area: formulario;
+                }
+                .mapa{grid-area: mapa;}
+        
+        .formulario{
+        
+            display: inline-block;
+            height: 450px;
+            width: 350px;
+            background-color: $color-resp2;
+            margin-left: 8px;
+            }
+           
+        
+            textarea{
+                width: 175px;
+            }
+            select{
+                display: inline-block;
+                width: 50%;
+                height: 30px;
+                text-align: center;
+                background-color: #efefef;
+                margin: 10px 0;}    
+                }
+        
+
+                      
